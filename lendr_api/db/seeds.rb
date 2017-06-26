@@ -9,10 +9,16 @@
 require 'faker'
 
 20.times do
-  User.create(username: Faker::Internet.unique.user_name, email: Faker::Internet.email, rating: Faker::Number.between(1, 5).to_i, picture: '/Users/ericfarber/Development/smiley.jpg', home_location: Faker::Address.latitude + ',' + Faker::Address.longitude
+  User.create(username: Faker::Internet.unique.user_name, password: 'pw', email: Faker::Internet.email, picture: '/Users/ericfarber/Development/smiley.jpg', home_location: Faker::Address.latitude + ',' + Faker::Address.longitude
   )
 end
 
 20.times do
   Book.create(title: Faker::Book.title, author: Faker::Book.author, description: Faker::Hipster.paragraph, rating: Faker::Number.between(1, 5).to_i)
+end
+
+
+16.times do
+  UserBook.create(userId: Faker::Number.between(1, 19).to_i,
+   bookId: Faker::Number.between(1, 19).to_i)
 end

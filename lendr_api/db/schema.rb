@@ -26,16 +26,15 @@ ActiveRecord::Schema.define(version: 20170626153316) do
 
   create_table "user_books", force: :cascade do |t|
     t.integer "bookId"
-    t.integer "giverId"
-    t.integer "takerId"
+    t.integer "userId"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
+    t.string "password_digest"
     t.string "email"
-    t.integer "rating"
     t.string "picture"
     t.string "home_location"
     t.datetime "created_at", null: false
