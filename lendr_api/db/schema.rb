@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20170626153316) do
   end
 
   create_table "user_books", force: :cascade do |t|
-    t.integer "bookId"
-    t.integer "userId"
+    t.integer "book_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

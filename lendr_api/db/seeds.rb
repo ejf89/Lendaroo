@@ -19,6 +19,6 @@ end
 
 
 16.times do
-  UserBook.create(userId: Faker::Number.between(1, 19).to_i,
-   bookId: Faker::Number.between(1, 19).to_i)
+  UserBook.create(user_id: Faker::Number.between(1, 19).to_i,
+   book_id: Faker::Number.between(1, 19).to_i)
 end
